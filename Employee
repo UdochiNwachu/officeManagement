@@ -1,0 +1,57 @@
+public class Employee extends Person {
+
+    //Declared variables
+    private int employeeNum;
+    private double annualSalary;
+
+    //No-argument constructor
+    public Employee(){
+        super();
+        this.employeeNum = employeeNum;
+        this.annualSalary = annualSalary;
+    }
+
+    /*Constructor with argument
+    super method included to extend Person class*/
+    public Employee(String firstName, String lastName, int phoneNumber, int employeeNum, double annualSalary){
+        super(firstName, lastName, phoneNumber);
+        this.employeeNum = employeeNum;
+        this.annualSalary = annualSalary;
+    }
+
+//Accessors and Mutators
+    /**
+     * @return the employeeNum
+     */
+    public int getEmployeeNum() {
+        return employeeNum;
+    }
+
+    /**
+     * @param employeeNum the employeeNum to set
+     */
+    public void setEmployeeNum(int employeeNum) {
+        this.employeeNum = employeeNum;
+    }
+
+    /**
+     * @return the annualSalary
+     */
+    public double getAnnualSalary() {
+        return annualSalary;
+    }
+
+    /**
+     * @param annualSalary the annualSalary to set
+     */
+    public void setAnnualSalary(double annualSalary) {
+        this.annualSalary = annualSalary;
+    }
+
+    //toString for Employee class
+    @Override
+    public String toString(){
+        return String.format("Name: %s \nPhone Number: %d \nEmployee Number: %d \nAnnual Salary: %.2f", name(), getPhoneNumber(), employeeNum, annualSalary);
+    }
+
+}
