@@ -1,3 +1,5 @@
+import org.jetbrains.annotations.Contract;
+
 public class Date {
 
     //Declared variables
@@ -5,6 +7,7 @@ public class Date {
     private int month;
     private int year;
 
+    @Contract(pure = true)
     public Date()
     {
         this.day = day;
