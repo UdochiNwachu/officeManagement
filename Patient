@@ -1,0 +1,76 @@
+public class Patient extends Person {
+
+    //Declared variables
+    private Date dateOfBirth;
+    private double balance;
+
+    //No-argument constructor
+    public Patient(){
+        super();
+        this.dateOfBirth = dateOfBirth;
+        this.balance = balance;
+    }
+
+    /*Constructor with arguments
+    super method included to extend Person class*/
+    public Patient(String firstName, String lastName, int phoneNumber, Date dateOfBirth, double balance){
+        super(firstName, lastName, phoneNumber);
+        this.dateOfBirth = dateOfBirth;
+        this.balance = balance;
+    }
+
+//Accessors and Mutators
+    /**
+     * @return the dateOfBirth
+     */
+    public Date getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    /**
+     * @param dateOfBirth the dateOfBirth to set
+     */
+    public void setDateOfBirth(Date dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    /**
+     * @return the balance
+     */
+    public double getBalance() {
+        return balance;
+    }
+
+    /**
+     * @param balance the balance to set
+     */
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
+    public void amountDue(double amount){
+        balance = getBalance() + amount;
+    }
+
+    //query method for showing patient's name, date of birth and balance
+    public String query(){
+        return name() + " " + dateOfBirth + " " + balance;
+    }
+
+    //bill method for calculating patient's bill
+    public void bill(double amount){
+        balance = getBalance() + amount;
+    }
+
+    //payment method for calculating the patient's payment
+    public void payment(double amount){
+        balance = getBalance() - amount;
+    }
+
+    //toString for Patient class
+    @Override
+    public String toString(){
+        return String.format("Patient Name: %s \nPhone Number: 1(868)%d \nDate Of Birth: %s \nBalance: %.2f", name(), getPhoneNumber(), dateOfBirth, balance);
+    }
+
+}
