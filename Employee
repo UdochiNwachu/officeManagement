@@ -13,7 +13,7 @@ public class Employee extends Person {
 
     /*Constructor with argument
     super method included to extend Person class*/
-    public Employee(String firstName, String lastName, int phoneNumber, int employeeNum, double annualSalary){
+    public Employee(String firstName, String lastName, String phoneNumber, int employeeNum, double annualSalary){
         super(firstName, lastName, phoneNumber);
         this.employeeNum = employeeNum;
         this.annualSalary = annualSalary;
