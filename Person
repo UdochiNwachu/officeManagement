@@ -1,10 +1,11 @@
 public class Person {
 
     //Declared variables
-    private int count, phoneNumber;
+    private int count;
     public static int countNum = 0;
     private String firstName = " ";
     private String lastName = " ";
+    private String phoneNumber = " ";
 
     //No-argument constructor
     public Person(){
@@ -15,7 +16,7 @@ public class Person {
     }
 
     //Constructor with arguments
-    public Person(String firstName, String lastName, int phoneNumber){
+    public Person(String firstName, String lastName, String phoneNumber){
         this.count = ++countNum;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -68,14 +69,14 @@ public class Person {
     /**
      * @return the phoneNumber
      */
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
     /**
      * @param phoneNumber the phoneNumber to set
      */
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
