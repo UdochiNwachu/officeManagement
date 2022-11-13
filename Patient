@@ -13,12 +13,11 @@ public class Patient extends Person {
 
     /*Constructor with arguments
     super method included to extend Person class*/
-    public Patient(String firstName, String lastName, int phoneNumber, Date dateOfBirth, double balance){
+    public Patient(String firstName, String lastName, String phoneNumber, Date dateOfBirth, double balance){
         super(firstName, lastName, phoneNumber);
         this.dateOfBirth = dateOfBirth;
         this.balance = balance;
     }
-
 //Accessors and Mutators
     /**
      * @return the dateOfBirth
